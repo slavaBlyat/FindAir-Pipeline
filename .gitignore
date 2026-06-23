@@ -1,0 +1,12 @@
+bin/
+obj/
+node_modules/
+.nx/
+.dotnet/
+.dotnet-home/
+.node/
+.vs/
+.vscode/
+TestResults/
+*.user
+*.suo

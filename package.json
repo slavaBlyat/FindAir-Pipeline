@@ -1,0 +1,17 @@
+{
+  "name": "findair",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "graph": "nx graph",
+    "build": "nx run-many -t build",
+    "test": "dotnet test FindAir.sln",
+    "format": "dotnet format FindAir.sln --verify-no-changes"
+  },
+  "devDependencies": {
+    "nx": "23.0.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  }
+}
