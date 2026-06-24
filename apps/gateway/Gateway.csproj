@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup><ProjectReference Include="..\..\libs\rabbit-client\RabbitClient.csproj" /></ItemGroup>
+</Project>
+

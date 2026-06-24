@@ -1,0 +1,18 @@
+{
+  "name": "tb-consumer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/tb-consumer",
+  "implicitDependencies": ["rabbit-client"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": { "command": "dotnet build apps/tb-consumer/TbConsumer.csproj --no-restore" }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": { "command": "dotnet run --project apps/tb-consumer/TbConsumer.csproj" }
+    }
+  },
+  "tags": ["type:app", "scope:rabbitmq", "role:consumer"]
+}
