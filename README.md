@@ -44,7 +44,7 @@ grows, prefer moving NuGet versions into `Directory.Packages.props`.
 - .NET SDK `10.0.300`
 - Node.js supported by Nx: `20.19+`, `22.12+`, or `24+`
 - npm
-- Docker, if RabbitMQ is not already running
+- A reachable RabbitMQ broker
 
 Useful checks:
 
@@ -77,13 +77,10 @@ or after package changes.
 
 ## Run locally
 
-Start RabbitMQ:
+RabbitMQ is not provisioned by this repository. Start or connect to a broker
+outside the repo, then point the apps at it with `RabbitMq` configuration.
 
-```bash
-docker compose up -d rabbitmq
-```
-
-RabbitMQ endpoints:
+Default local RabbitMQ endpoints:
 
 | Endpoint | Value |
 | --- | --- |
@@ -267,7 +264,7 @@ Important metrics:
 ## Production notes
 
 The current repo is good for a small demo, but it is not production-complete yet.
-Before production use, add CI, tests, Dockerfiles, centralized package
+Before production use, add CI, tests, deployment manifests, centralized package
 management, structured health checks, metrics/tracing, dead-letter topology,
 and real secret management.
 
